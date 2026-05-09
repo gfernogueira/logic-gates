@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path=".gitignore" />
+    <File Path="global.json" />
+  </Folder>
+  <Project Path="logic-gates/logic-gates.csproj" />
+</Solution>
