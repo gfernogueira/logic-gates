@@ -1,3 +1,6 @@
+using logic_gates.Services;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace logic_gates
 {
     internal static class Program
@@ -8,10 +11,15 @@ namespace logic_gates
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            var services = new ServiceCollection();
+
+            services.AddSingleton<RunService>();
+
+            services.AddTransient<MainForm>();
+
+            Application.Run(new MainForm());
         }
     }
 }
